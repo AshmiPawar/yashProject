@@ -1,0 +1,25 @@
+#spring-data-book-banner {
+	background-image: url('../images/ban_sd_05.gif');
+	background-position: 0px 0px;
+	margin-bottom: 10px;
+	height: 120px;
+	width: 700px;
+}
+
+#spring-data-book-banner a {
+	background: url('../images/ban_sd_05.gif');
+}
+
+#spring-data-book-banner .action-button {
+	float: right;
+	width: 135px;
+	height: 52px;
+	background-position: -550px -125px;
+	text-indent: -99999px;	
+	margin-top: 36px;
+	margin-right: 12px;
+}
+
+#spring-data-book-banner .action-button:hover {
+	background-position: -550px -188px;
+}

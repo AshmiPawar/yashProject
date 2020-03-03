@@ -1,0 +1,54 @@
+TDD
+-Write a TDD for removing duplicate elements from list.{1,2,3,4,5,6,1,2,3,1,2,,6,7,8,9}=>{1,2,3,4,5,6,7,8,9}
+-BDD vs TDD
+-FizzBuzz
+-Word Counter
+-Password verifier
+ -password should be larger than 8 char.
+ -password should not be null
+ -password should have at least 1 upper case character
+ -password should have at least 1 lower case character
+ -password should have at least 1 number
+
+Each one of it must throw one exception with different message of your choice
+ -Add feature : password is OK if at least 3 of previous condition is true
+ -Add feature : password is never OK if item 1.4 is not true
+
+
+
+
+
+https://ramj2ee.blogspot.com/2013/12/builder-design-pattern-implementation.html
+
+
+
+
+
+	@Test
+	public void shouldMakeBlackCoffeeOnInputChoiceOne() {
+		
+		Map<String, Ingredient> ingredients = new HashMap<String, Ingredient>(){
+			{  
+			   put("Coffee", new Ingredient(3,0));
+			   put("Water", new Ingredient(20,3));
+			   put("Sugar", new Ingredient(15,2));
+			   put("Milk", new Ingredient(0,0));
+			   put("Tea", new Ingredient(0,0));
+
+		    }
+		};
+		
+		when(mockScanner.getInput("menu choice")).thenReturn(4).thenReturn(9);
+		when(mockScanner.getInput("blackCoffeeQuantity")).thenReturn(2);
+		when(beverageRecipeMock.blackTeaRecipe()).thenReturn(ingredients);
+		when(beverageMock.makeDrinkOperation(ingredients, 2, "Black Coffee", 10)).thenReturn("2 cup black coffee served");
+		
+		
+		
+		organizer.menuOperations();
+		beverageMock.makeDrinkOperation(ingredients, 2, "Black Coffee", 10);
+		verify(beverageMock).makeDrinkOperation(ingredients, 2, "Black Coffee", 10);
+		
+		
+	}
+	

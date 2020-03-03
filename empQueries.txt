@@ -1,0 +1,11 @@
+select employees.name,salary.salary from employees left outer join salary on employees.salary_id=salary.salary_id where employees.employee_id=3;
++------+---------+
+| name | salary  |
++------+---------+
+| sai  | 4444444 |
++------+---------+
+1 row in set (0.00 sec)
+
+
+
+select employees.name,department.department_name from employees left outer join department on employees.department_id=department.department_id where employees.employee_id=1

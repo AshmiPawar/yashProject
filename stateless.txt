@@ -1,0 +1,9 @@
+import React from 'React';
+
+const Stateless = () => 
+	<div>
+	<h1> React JS </h1>
+	<p> we are learning React</p>
+	</div>
+
+export default Stateless;
